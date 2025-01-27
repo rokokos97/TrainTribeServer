@@ -19,7 +19,8 @@ const UserSchema: Schema = new Schema(
     auth_id: { type: String, required: true, unique: true },
     last_onbording_step: { type: Boolean, require: true },
     has_complyted_onboarding: { type: Boolean, require: true },
-    privacy_settings: { type: Boolean, default: false }
+    privacy_settings: { type: Boolean, default: false },
+    date_of_birth: { type: Date, required: false }
   },
   {
     timestamps: true

@@ -17,6 +17,7 @@ export interface IUser extends Document {
   last_onbording_step: boolean;
   has_complyted_onboarding: boolean;
   privacy_settings: boolean;
+  date_of_birth?: Date;
 }
 
 export type UserDocument = HydratedDocument<IUser>;

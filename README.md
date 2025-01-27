@@ -173,8 +173,9 @@ The server provides the following API endpoints:
 | `longitude`          | `Number`     | No       | No     | Geographical longitude of the user's location.                                |
 | `completed_trainings`| `Number`     | Yes      | No     | Number of trainings the user has completed.                                   |
 | `social_number`      | `String`     | Yes      | No     | User's social number.                                                         |
+| `date_of_birth`      | `Date`       | No       | No     | User's date of birth.                                                         |
 | `athlete_bio`        | `String`     | No       | No     | User's athletic biography and background information.                         |
-| `auth_id`           | `String`     | Yes      | Yes    | Unique authentication ID from the auth provider.                              |
+| `auth_id`            | `String`     | Yes      | Yes    | Unique authentication ID from the auth provider.                              |
 | `last_onbording_step`| `Boolean`    | Yes      | No     | Indicates if user is on the last onboarding step.                            |
 | `has_complyted_onboarding`| `Boolean`| Yes      | No     | Indicates if user has completed onboarding.                                  |
 | `privacy_settings`   | `Boolean`    | No       | No     | User's privacy preference. Default is false.                                  |
