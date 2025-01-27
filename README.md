@@ -9,7 +9,7 @@ This project includes **Swagger** documentation, which provides an interactive u
 ## Functionality
 
 - Handles requests from the client side to facilitate communication between users and training events.
-- Manages a MySQL database to store data about users and events.
+- Supports both MongoDB and MySQL databases for data storage.
 - CRUD operations for users: creating, editing, and deleting user accounts.
 - CRUD operations for training events: creating, editing, sorting, and deleting training sessions.
 
@@ -30,8 +30,7 @@ Before installing and running the server, make sure the following tools are inst
 
    ```bash
    git clone https://github.com/rokokos97/TrainTribeServer.git
-   cd project-name
-
+   cd TrainTribeServer
    ```
 
 2. **Install Dependencies**:
@@ -57,12 +56,15 @@ Before installing and running the server, make sure the following tools are inst
    ```
 
 4. **Run the Server**:
+
    ```bash
    npm run build
    npm start
    ```
+
 5. **View API Documentation**:
    After starting the server, you can access the API documentation powered by **Swagger** at the following URL:
+
    ```plaintext
    http://localhost:<PORT>/api-docs
    ```
@@ -91,7 +93,7 @@ The application is built on the `MVC` architecture pattern, where the `Model` re
 | │ └── `user.interfaces.ts`          | Define TypeScript interfaces for user entities     |
 | ├── `middleware/`                   | Middleware functions                               |
 | │ └── `auth.middleware.ts`          | Middleware for handling user authentication        |
-| │ └── `upload.middleware.ts`        | Middleware for                                     |
+| │ └── `upload.middleware.ts`        | Middleware for handling file upload operations     |
 | ├── `mock/`                         | Mock data for development and testing              |
 | │ └── `sportsMock.mock.ts`          | Mock data for sports-related entities              |
 | ├── `models/`                       | Database structure definitions (Models)            |
@@ -211,24 +213,3 @@ The `Sport` model represents various sports that can be associated with users or
 | `name`    | `String` | Yes          | The name of the sport. Must be unique. |
 
 ---
-
-[//]: # "4. **Create new MySQL Database**:"
-[//]: # "   1. Open new terminal and run `mysql -u root -p` to log in to MySQL."
-[//]: # "   2. Create a new database by running the following command:"
-[//]: # "      ```sql"
-[//]: # "      CREATE DATABASE db_name;"
-[//]: # "      ```"
-[//]: # "   3. Verify that the database was created by running:"
-[//]: # "      ```sql"
-[//]: # "      SHOW DATABASES;"
-[//]: # "      ```"
-[//]: # "   4. Create a new user and grant privileges to the database:"
-[//]: # "      ```sql"
-[//]: # "      CREATE USER 'db_username'@'localhost' IDENTIFIED BY 'db_password';"
-[//]: # "      GRANT ALL PRIVILEGES ON db_name.* TO 'db_username'@'localhost';"
-[//]: # "      FLUSH PRIVILEGES;"
-[//]: # "      ```"
-[//]: # "   5. Use the database by running:"
-[//]: # "      ```sql"
-[//]: # "      USE db_name;"
-[//]: # "      ```"
